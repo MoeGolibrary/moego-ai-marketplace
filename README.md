@@ -25,5 +25,14 @@ MoeGo 研发团队 Claude Code Plugin Marketplace。
 ## 更新
 
 ```bash
+# 更新 Marketplace 目录（获取最新插件列表）
+/plugin marketplace update
+
+# 更新 Plugin（拉取插件最新版本）
 /plugin update moego
 ```
+
+## 注意事项
+
+- 本 Marketplace 的 GitHub 默认分支为 `production`，`/plugin marketplace add` 会拉取该分支
+- Plugin 版本锁定在 `v2.0.0` tag，更新版本时需同步修改 marketplace.json 中的 `version` 和 `ref`
