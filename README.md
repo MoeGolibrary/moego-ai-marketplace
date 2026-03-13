@@ -2,6 +2,10 @@
 
 MoeGo 研发团队 Claude Code Plugin Marketplace。
 
+本仓库仅存放 marketplace 配置（插件目录），不含 plugin 代码。Plugin 代码在 [moego-ai-plugin](https://github.com/MoeGolibrary/moego-ai-plugin)。
+
+> 想添加新 Skill？请到 [moego-ai-plugin](https://github.com/MoeGolibrary/moego-ai-plugin) 仓库提交 PR。本仓库只在 plugin 发版时更新 version 和 ref。
+
 ## 安装
 
 ```bash
@@ -12,15 +16,7 @@ MoeGo 研发团队 Claude Code Plugin Marketplace。
 /plugin install moego@moego-ai-marketplace
 ```
 
-## 可用 Plugin
-
-| Command | 说明 |
-|---------|------|
-| `/moego:superflow` | AI Native 开发工作流（功能开发 → PR 交付） |
-| `/moego:e2e` | E2E 测试规划与 Playwright 代码生成 |
-| `/moego:datadog` | Datadog 日志/Trace/服务依赖查询 |
-| `/moego:writing-prompts` | 编写 LLM 一次性 Prompt |
-| `/moego:writing-system-documents` | 编写 Agent 常驻系统文档 |
+安装后可用的 Skill 列表见 [moego-ai-plugin README](https://github.com/MoeGolibrary/moego-ai-plugin#readme)。
 
 ## 更新
 
@@ -32,7 +28,14 @@ MoeGo 研发团队 Claude Code Plugin Marketplace。
 /plugin update moego
 ```
 
+## 发版流程
+
+当 plugin 仓库发布新版本时，需同步更新本仓库：
+
+1. 修改 `marketplace.json` 中的 `version` 和 `source.ref` 为新版本号
+2. 提交 PR 合入 `production` 分支
+
 ## 注意事项
 
 - 本 Marketplace 的 GitHub 默认分支为 `production`，`/plugin marketplace add` 会拉取该分支
-- Plugin 版本锁定在 `v2.0.0` tag，更新版本时需同步修改 marketplace.json 中的 `version` 和 `ref`
+- Plugin 版本锁定在 git tag，更新版本时需同步修改 marketplace.json 中的 `version` 和 `ref`
