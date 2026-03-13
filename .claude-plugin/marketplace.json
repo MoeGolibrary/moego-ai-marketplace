@@ -12,11 +12,11 @@
     {
       "name": "moego",
       "description": "MoeGo engineering team plugin — E2E testing, Superflow AI-native workflow, Datadog observability, and LLM writing skills for the MoeGo pet services platform.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "source": {
         "source": "github",
         "repo": "MoeGolibrary/moego-ai-plugin",
-        "ref": "v2.0.0"
+        "ref": "v2.0.1"
       },
       "category": "development",
       "author": {
